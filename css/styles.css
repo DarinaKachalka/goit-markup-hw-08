@@ -182,7 +182,6 @@ button {
   padding-bottom: 100px; */
 }
 .page-footer-container {
-  display: flex;
 }
 .footer-logo-second {
   font-weight: 800;
@@ -192,8 +191,15 @@ button {
   text-transform: uppercase;
   color: var(--second-color-background-light);
 }
+
+.logo-centr-footer {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+}
 .footer-container {
-  width: 268px;
+  width: 264px;
+  margin: 0 auto 72px;
 
   /* display: flex; */
 
@@ -221,9 +227,11 @@ button {
   letter-spacing: 0.02em;
   color: var(--second-color-background-light);
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-social-container {
-  margin-left: 120px;
+  /* margin-left: 120px; */
+  margin-bottom: 72px;
 }
 
 .main-footer-container {
@@ -262,16 +270,21 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-color-background-light);
+  text-align: center;
 }
 .footer-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  /* flex-wrap: wrap; */
 }
 .footer-modal-form-input {
-  width: 264px;
+  /* width: 264px; */
+  margin-bottom: 16px;
+  width: 398px;
   height: 40px;
   padding-left: 16px;
-  margin-right: 24px;
+  /* margin-right: 24px; */
   border: 1px solid var(--main-color-background-light);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -333,6 +346,7 @@ button {
     url("../images/bg-mobile.jpg");
   /* width: 1440px; */
   width: 428px;
+  margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
@@ -749,8 +763,8 @@ button {
 }
 
 .modal {
-  width: 408px;
-
+  /* width: 408px; */
+  width: 392px;
   background-color: var(--modal-window-background);
   position: absolute;
   top: 50%;
@@ -982,6 +996,28 @@ button {
   .basis-mini-title {
     text-align: start;
   }
+  .team-list {
+  }
+  .team-item {
+    height: 428px;
+  }
+  .team-item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .customers-list-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .customers-container {
+    max-width: 552px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -993,18 +1029,6 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/bg-table2x.jpg");
-  }
-  .team-list {
-  }
-  .team-item {
-    height: 428px;
-  }
-  .team-item:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
-
-  .customers-list-item {
-    width: calc((100% - 24px) / 3);
   }
 }
 
