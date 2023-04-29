@@ -428,7 +428,7 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-  color: #2e2f42;
+  color: var(--main-color-text);
 }
 .basis-text {
   font-weight: 500;
@@ -1018,6 +1018,10 @@ button {
   .customers-container {
     max-width: 552px;
   }
+
+  .modal {
+    width: 408px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -1038,5 +1042,97 @@ button {
   }
   .work {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    min-width: 1158px;
+  }
+
+  .hero {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/bg-desktop.jpg");
+    min-width: 1158px;
+  }
+
+  .basis-list {
+  }
+
+  .basis-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .basis-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .basis-mini-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--main-color-text);
+  }
+
+  .customers-list {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+
+  .customers-list-item {
+    width: calc((1128px - 120px) / 6);
+    height: 88px;
+  }
+
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-container {
+    display: flex;
+
+    text-align: left;
+  }
+  .footer-text {
+    width: 264px;
+  }
+
+  .footer-social-container {
+    margin-left: 120px;
+  }
+  .main-footer-container {
+    align-items: center;
+    gap: 72px;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+  .footer-modal-form-input {
+    width: 264px;
+    margin-right: 24px;
+  }
+  .main-footer-container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/bg-desktop2x.jpg");
   }
 }
