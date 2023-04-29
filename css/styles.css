@@ -42,6 +42,9 @@ ul {
 
 img {
   display: block;
+  min-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 button {
@@ -59,14 +62,16 @@ button {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1158px;
+  max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /*padding-top: 120px;
+  padding-bottom: 120px;*/
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -364,22 +369,31 @@ button {
 }
 .basis-list {
   display: flex;
+  flex-direction: column;
+  /* width: 396px; */
 }
-.basis-item:not(:last-child) {
+/* .basis-item:not(:last-child) {
   margin-right: 24px;
-}
+} */
 
 .basis-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
 }
 
 .basis-mini-title {
-  margin-bottom: 8px;
+  /* margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--main-color-text);
+  color: var(--main-color-text); */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
 }
 .basis-text {
   font-size: 16px;
@@ -519,13 +533,18 @@ button {
 }
 .customers-list {
   display: flex;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
+  gap: 72px 16px;
+  /* justify-content: center;
+  align-items: center; */
+  flex-wrap: wrap;
+  /* margin-bottom: 72px; */
 }
 .customers-list-item {
-  width: calc((1128px - 120px) / 6);
+  /* width: calc((1128px - 120px) / 6);
+  height: 88px; */
+  /*flex-basis: 100%;*/
   height: 88px;
+  width: calc((100% - 16px) / 2);
 }
 
 .customers-list-link {
@@ -888,4 +907,24 @@ button {
 .modal-form-button:focus {
   background-color: var(--color-focus-hover);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Media */
+
+@media screen and (min-width: 428px) {
+  .container {
+    max-width: 428px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .basis-link {
+    display: none;
+  }
 }
