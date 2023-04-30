@@ -261,7 +261,7 @@ button {
 }
 
 .footer-email-container {
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 .footer-input-title {
   margin-bottom: 16px;
@@ -347,7 +347,7 @@ button {
     ),
     url("../images/bg-mobile.jpg");
   /* width: 1440px; */
-  max-width: 428px;
+  max-width: 767px;
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
@@ -358,7 +358,7 @@ button {
 }
 .hero-title {
   /* width: 496px; */
-  width: 320px;
+  max-width: 320px;
   font-size: 36px;
   line-height: 1.11;
   margin-bottom: 48px;
@@ -958,29 +958,43 @@ button {
     max-width: 428px;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
+@media (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/bg-mobile2x.jpg");
   }
+}
+@media screen and (max-width: 767px) {
   .basis-link {
     display: none;
   }
   .work {
     display: none;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/bg-table.jpg");
-    width: 768px;
+    max-width: 1157px;
   }
   .hero-title {
     font-size: 56px;
     line-height: 1.07;
-    width: 496px;
+    max-width: 496px;
   }
 
   .basis-list {
@@ -1024,11 +1038,36 @@ button {
   .modal {
     width: 408px;
   }
+  .main-footer-container {
+    margin-left: 108px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-container {
+    margin: 0;
+  }
+  .logo-centr-footer {
+    text-align: left;
+  }
+  .footer-input-title {
+    text-align: left;
+  }
+  .footer-title {
+    text-align: left;
+  }
+  .footer-modal-form-input {
+    width: 264px;
+  }
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2) and (max-width: 1157px),
+  (min-resolution: 192dpi) and (max-width: 1157px),
+  (min-resolution: 2dppx) and (max-width: 1157px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1037,8 +1076,7 @@ button {
       url("../images/bg-table2x.jpg");
   }
 }
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1157px) {
   .basis-link {
     display: none;
   }
@@ -1060,10 +1098,11 @@ button {
         rgba(46, 47, 66, 0.7)
       ),
       url("../images/bg-desktop.jpg");
-    min-width: 1158px;
+    max-width: 1440px;
   }
 
   .basis-list {
+    flex-wrap: nowrap;
   }
 
   .basis-item:not(:last-child) {
@@ -1098,38 +1137,50 @@ button {
     padding-bottom: 100px;
   }
 
-  .footer-container {
-    display: flex;
-
+  /* .footer-title {
     text-align: left;
+  } */
+  .footer-container {
+    /* margin-right: 120px; */
+    /* margin-left: 156px; */
+    /* display: flex;
+
+    text-align: left; */
   }
+  /* .logo-centr-footer {
+    text-align: left;
+  } */
   .footer-text {
     width: 264px;
   }
 
   .footer-social-container {
-    margin-left: 120px;
+    /* margin-right: auto; */
+    /* margin-left: 120px; */
   }
-  .main-footer-container {
-    align-items: center;
-    gap: 72px;
-  }
+
   .footer-form {
     flex-direction: row;
   }
   .footer-modal-form-input {
     width: 264px;
-    margin-right: 24px;
+    /* margin-right: 24px; */
   }
   .main-footer-container {
+    margin-left: auto;
+    justify-content: space-between;
     flex-wrap: nowrap;
     flex-direction: row;
+    /* gap: 72px; */
   }
+  /* .footer-input-title {
+    text-align: left;
+  } */
 }
 
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2) and (min-width: 1158px),
+  (min-resolution: 192dpi) and (min-width: 1158px),
+  (min-resolution: 2dppx) and (min-width: 1158px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
