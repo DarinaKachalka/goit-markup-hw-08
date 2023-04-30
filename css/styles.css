@@ -239,7 +239,7 @@ button {
 
 .mob-menu-link:hover,
 .mob-menu-link:focus {
-  background: var(--color-focus-hover);
+  color: var(--color-focus-hover);
 }
 
 .active {
@@ -259,7 +259,7 @@ button {
 
 .mob-menu-link-tel:hover,
 .mob-menu-link-tel:focus {
-  background: var(--color-logo-button);
+  color: var(--color-logo-button);
 }
 
 .mob-menu-link-mail {
@@ -274,7 +274,7 @@ button {
 
 .mob-menu-link-mail:hover,
 .mob-menu-link-mail:focus {
-  background: var(--color-logo-button);
+  color: var(--color-logo-button);
 }
 
 .mob-menu-social-list {
@@ -1130,6 +1130,12 @@ button {
   .container {
     max-width: 768px;
   }
+  /*zabrat*/
+  @media screen and (min-width: 768px) and (max-width: 1157px) {
+    .footer > .container {
+      max-width: 582px;
+    }
+  }
 
   .hero {
     background-image: linear-gradient(
@@ -1208,7 +1214,7 @@ button {
     width: 408px;
   }
   .main-footer-container {
-    margin-left: 108px;
+    /* margin-left: 108px; */
     flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
